@@ -62,7 +62,9 @@ app.use((error, req, res) => {
   })
 })
 
+const appPort = process.env.PORT || 3000
+
 // Start express server
-http.createServer(app).listen(process.env.PORT, () => {
-  console.log('Zoom App is listening on port', process.env.PORT)
+http.createServer(app).listen(appPort, () => {
+  console.log('Zoom App is listening on port', appPort)
 })
